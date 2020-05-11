@@ -18,35 +18,41 @@ public class Main {
         arvore.inserir(10, 10);
         arvore.inserir(3, 3);
         System.out.println("Arvore" + arvore.toString());
-
-        //Letra A
+        System.out.println("||||||||||||||||||||||||||||||");
+        System.out.println("Letra A");
         System.out.println("Arvore PreOrder: " + arvore.preOrder());
         System.out.println("Arvore PosOrder: " + arvore.posOrder());
         System.out.println("Arvore InOrder: " + arvore.inOrder());
-
-        //Letra B
+        System.out.println("||||||||||||||||||||||||||||||");
+        System.out.println("Letra B");
         if (arvore.busca(64) == true) {
             System.out.println("Existe");
         } else {
             System.out.println("Não Existe");
         }
+        System.out.println("||||||||||||||||||||||||||||||");
 
-        //Letra C
+        System.out.println("Letra C");
         System.out.println("Maior Valor: " + arvore.menor().getValor());
         System.out.println("Menor Valor: " + arvore.maior().getValor());
 
-        //Letra D
+        System.out.println("||||||||||||||||||||||||||||||");
+
+        System.out.println("Letra D");
+
         int total = 0;
         for (int i = 0; i < arvore.listInOrder().size(); i++) {
             int soma = arvore.listInOrder().get(i).getValor();
             total = total + soma;
         }
         System.out.println("Media dos valores da arvore: " + (total / arvore.getTamanho()));
+        System.out.println("||||||||||||||||||||||||||||||");
 
-        //Letra E
+        System.out.println("Letra E");
         System.out.println("Tamanho: " + arvore.getTamanho());
+        System.out.println("||||||||||||||||||||||||||||||");
 
-        //Letra F
+        System.out.println("Letra F");
         LinkedList<No> nos = new LinkedList<>();
         for (int i = 0; i < arvore.listInOrder().size(); i++) {
             if (arvore.listInOrder().get(i).getFilhoEsq() == null && arvore.listInOrder().get(i).getFilhoDir() == null) {
@@ -55,7 +61,10 @@ public class Main {
         }
         System.out.println("Numero de folhas: " + nos.size());
 
-        //Letra G
+        System.out.println("||||||||||||||||||||||||||||||");
+
+        System.out.println("Letra G");
+
         int maiorAltura = 0;
         int aux = 0;
         for (int j = 0; j < arvore.listInOrder().size(); j++) {
@@ -66,7 +75,9 @@ public class Main {
         }
         System.out.println("Altura da arvore: " + maiorAltura);
 
-        //Letra H
+        System.out.println("||||||||||||||||||||||||||||||");
+
+        System.out.println("Letra H");
         arvore.remove(99);
 
         System.out.println("Arvore" + arvore.toString());
